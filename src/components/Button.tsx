@@ -8,8 +8,15 @@ type Props = {
   size: "md" | "lg";
   disabled?: boolean;
   onClick: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+  className?: string;
 };
-const Button = ({ children, size, disabled, onClick }: Props) => {
+const Button = ({
+  children,
+  size,
+  disabled,
+  onClick,
+  className: style,
+}: Props) => {
   const className = {
     lg: "h-[56px] min-w-[160px] text-xs px-inline-xxs",
     md: "h-[48px] min-w-[120px] text-xxs px-inline-xxxs",
@@ -19,7 +26,8 @@ const Button = ({ children, size, disabled, onClick }: Props) => {
     <button
       disabled={!!disabled}
       className={cn([
-        "flex items-center justify-center text-base-light-contrast cursor-pointer rounded-none bg-base-dark-highlight font-semibold leading-lg ease-linear delay-0 duration-[2s]",
+        "flex w-fit items-center justify-center text-base-light-contrast cursor-pointer rounded-none bg-base-dark-highlight font-semibold leading-lg ease-linear delay-0 duration-[2s]",
+        style || "",
         className[size],
         "focus:border-thin focus:border-primary-main focus:bg-base-dark-main",
         "hover:bg-base-dark-main hover:transition-none",
