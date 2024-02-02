@@ -10,3 +10,30 @@
     transform: translateX(calc(-685px));
   }
 }
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(calc(-1310px));
+  }
+}
+
+@keyframes floatDesktop {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(calc(-1815px));
+  }
+}
+
+@keyframes floatDesktopG {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(calc(-2150px));
+  }
+}
