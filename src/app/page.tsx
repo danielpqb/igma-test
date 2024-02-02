@@ -34,7 +34,7 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col font-base mt-[104px] desktop:mt-[124px] desktop-g:mt-[200px]">
-      <header className="flex w-full items-center justify-between h-[80px] fixed top-[0] left-[0] z-30">
+      <header className="flex w-full items-center justify-between h-[80px] fixed top-[0] left-[0] z-30 animate-[fadeInDown_2s_ease-out_1]">
         <Image
           src={logoHeader}
           width={80}
@@ -47,22 +47,22 @@ export default function Home() {
         />
       </header>
       <MobilePage
-        className="tablet:hidden"
+        className="tablet:hidden animate-[fadeInUp_2s_ease-out_1]"
         gridImgs={gridImgs}
         phoneImgs={phoneImgs}
       />
       <TabletPage
-        className="hidden tablet:flex desktop:hidden"
+        className="hidden tablet:flex desktop:hidden animate-[fadeInUp_2s_ease-out_1]"
         gridImgs={gridImgs}
         phoneImgs={phoneImgs}
       />
       <DesktopPage
-        className="hidden desktop:flex desktop-g:hidden"
+        className="hidden desktop:flex desktop-g:hidden animate-[fadeInUp_2s_ease-out_1]"
         gridImgs={gridImgs}
         phoneImgs={phoneImgs}
       />
       <DesktopGPage
-        className="hidden desktop-g:flex"
+        className="hidden desktop-g:flex animate-[fadeInUp_2s_ease-out_1]"
         gridImgs={gridImgs}
         phoneImgs={phoneImgs}
       />
